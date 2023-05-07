@@ -1,0 +1,40 @@
+$header-bg-color: white
+$header-border-color: #000
+$header-padding: 3rem 3rem 0.5rem 1rem
+$button-color-left: #1a5fff
+$button-color-right: #9a1212
+
+.header 
+  background-color: $header-bg-color
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 91%
+  max-width: 1280px
+  margin: 0 auto
+  padding: $header-padding
+  border-bottom: 0.175rem solid $header-border-color
+
+  h2 
+    font-size: 2rem
+
+.navigation 
+  display: flex
+  gap: 1rem
+
+  ul li 
+    padding-left: 2rem
+  
+.button-left-side, .button-right-side
+  background-color: $button-color-left
+  cursor: pointer
+  font-weight: 700
+  color: #FFFFFF
+  font-size: 1rem
+  padding: 0 1rem
+  height: 2.5rem
+  border-radius: 0.250rem
+  outline: 2px solid transparent
+
+.button-right-side 
+  background-color: $button-color-right
