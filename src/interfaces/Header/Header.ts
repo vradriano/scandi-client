@@ -3,5 +3,6 @@ export interface HeaderProps {
   leftButton: string;
   rightButton: string;
   type?: "button" | "submit" | "reset";
-  handleUserAction?: () => void;
+  handleActionLeftButton?: () => void;
+  handleActionRightButton?: () => void;
 }

@@ -1,6 +1,9 @@
 export interface CardProps {
+  id: number;
   sku: string;
   name: string;
   price: number;
-  specificAttributes: string;
+  type: string;
+  value: string;
+  handleSelectProductToDelete: (sku: string, id: number) => void;
 }

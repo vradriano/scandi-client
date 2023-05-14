@@ -3,7 +3,15 @@ import { useLocation } from "react-router-dom";
 
 import './Header.sass'
 
-export function Header({ title, leftButton, rightButton, type, handleUserAction}: HeaderProps) {
+export function Header({
+  title,
+  leftButton,
+  rightButton,
+  type,
+  handleActionLeftButton,
+  handleActionRightButton
+}: HeaderProps
+) {
   const location = useLocation();
   
   return (
@@ -11,22 +19,22 @@ export function Header({ title, leftButton, rightButton, type, handleUserAction}
       <h2>{title}</h2>
 
       <nav className="navigation">
-          <button 
-            onClick={handleUserAction} 
-            type={type} 
-            className="button-left-side"
-            >
-            {leftButton}
-          </button>
-
-          <button 
-            className="button-right-side"
-            id={location.pathname === "/" ? "delete-product-btn" : ""}
-            onClick={handleUserAction}
-            type={type}
+        <button 
+          onClick={handleActionLeftButton} 
+          type={type} 
+          className="button-left-side"
           >
-            {rightButton}
-          </button>
+          {leftButton}
+        </button>
+
+        <button 
+          className="button-right-side"
+          id={location.pathname === "/" ? "delete-product-btn" : ""}
+          onClick={handleActionRightButton}
+          type={type}
+        >
+          {rightButton}
+        </button>
       </nav>
     </header>
   )

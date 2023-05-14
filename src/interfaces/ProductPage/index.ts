@@ -14,7 +14,7 @@ export interface FormValues {
 export interface ErrorsValues {
   [key: string]: {
     hasError: boolean;
-    errorType: "required-data" | "invalid-data-type" | ""
+    errorType: "" | "required-data" | "invalid-data-type" | "invalid-value" | "sku-exists"
   };
 
 }
@@ -33,6 +33,13 @@ export type ProductTypeValues = {
 export type ProductTypeErrors = {
   [key: string]: {
     hasError: boolean | undefined;
-    errorType: "" | "required-data" | "invalid-data-type";
+    errorType: "" | "required-data" | "invalid-data-type" | "sku-exists" | "invalid-value";
   };
 };
+
+export interface TypeValueMap {
+  [key: string]: string | undefined;
+  DVD: string | undefined;
+  Book: string | undefined;
+  Furniture: string;
+}

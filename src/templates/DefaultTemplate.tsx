@@ -7,14 +7,22 @@ interface DefaultTemplateProps extends HeaderProps {
   children: React.ReactNode;
 }
 
-export function DefaultTemplate ({ title, leftButton, rightButton, handleUserAction, children }: DefaultTemplateProps) {
+export function DefaultTemplate ({ 
+  title, 
+  leftButton,
+  rightButton, 
+  handleActionLeftButton, 
+  handleActionRightButton, 
+  children 
+}: DefaultTemplateProps) {
   return (
     <div>
       <Header
         title={title}
         leftButton={leftButton}
         rightButton={rightButton}
-        handleUserAction={handleUserAction}
+        handleActionLeftButton={handleActionLeftButton}
+        handleActionRightButton={handleActionRightButton}
       />
       
         <main className="defaultContainer"> 
