@@ -156,7 +156,7 @@ function ProductPage() {
     let hasError = false;
   
     Object.entries(formValues).forEach(([name, value]) => {
-      if (!value && name !== "typeSwitcher") {
+      if (!value) {
         setErrors(prevErrors => ({
           ...prevErrors,
           [name]: {
@@ -316,8 +316,7 @@ function ProductPage() {
                   <div className="formWrapper">
                     <label htmlFor={formValues.typeSwitcher}>{field.label}</label>
                     <input
-                      
-                      id={formValues.typeSwitcher}
+                      id={field.name}
                       name={field.name}
                       type="number"
                       min={0.01}
